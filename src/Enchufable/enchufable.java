@@ -1,61 +1,35 @@
 package Enchufable;
 
+import java.util.Scanner;
+
 interface Enchufable {
-    void Encender();
-    void Apagar();
-    default boolean EstaEncendido(boolean estado) {
-        return estado;
-    };
+    void encender();
+    void apagar();
+    boolean estaEncendido();
 }
 
 class Lampara implements Enchufable {
-
-    boolean estado = false;
-
-    @Override
-    public void Encender() {
-        if (estado) {
-            System.out.println("La lampara ya estaba encendida");
-        }
-        else {
-            System.out.println("La lampara se encendió correctamente");
-            EstaEncendido(true);
-        }
+    private boolean encendido = false;
+    public void encender() {
+        encendido = true;
+        System.out.println("Lámpara encendida");
     }
-
-    @Override
-    public void Apagar() {
-        if (!estado) {
-            System.out.println(("La lampara no esta encendida!"));
-        } else {
-            System.out.println(("La lampara se apagó correctamente"));
-            EstaEncendido(false);
-        }
+    public void apagar() {
+        encendido = false;
+        System.out.println("Lámpara apagada");
     }
+    public boolean estaEncendido() { return encendido; }
 }
 
 class Ventilador implements Enchufable {
-
-    boolean estado = false;
-
-    @Override
-    public void Encender() {
-        if (estado) {
-            System.out.println("El ventilador ya estaba encendido");
-        }
-        else {
-            System.out.println("El ventilador se encendió correctamente");
-            EstaEncendido(true);
-        }
+    private boolean encendido = false;
+    public void encender() {
+        encendido = true;
+        System.out.println("Ventilador encendido");
     }
-
-    @Override
-    public void Apagar() {
-        if (!estado) {
-            System.out.println(("El ventilador no esta encendido!"));
-        } else {
-            System.out.println(("El ventilador se apagó correctamente"));
-            EstaEncendido(false);
-        }
+    public void apagar() {
+        encendido = false;
+        System.out.println("Ventilador apagado");
     }
+    public boolean estaEncendido() { return encendido; }
 }
