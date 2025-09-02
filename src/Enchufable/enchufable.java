@@ -22,7 +22,9 @@ class Lampara implements Enchufable {
     }
 
     @Override
-    public boolean estaEncendido() { return encendido; }
+    public boolean estaEncendido() {
+        return encendido;
+    }
 }
 
 
@@ -42,5 +44,7 @@ class Ventilador implements Enchufable {
     }
 
     @Override
-    public boolean estaEncendido() { return encendido; }
+    public boolean estaEncendido() {
+        return encendido;
+    }
 }
