@@ -10,7 +10,7 @@ interface Enchufable {
 
 class Lampara implements Enchufable {
 
-    boolean estado;
+    boolean estado = false;
 
     @Override
     public void Encender() {
@@ -36,7 +36,7 @@ class Lampara implements Enchufable {
 
 class Ventilador implements Enchufable {
 
-    boolean estado;
+    boolean estado = false;
 
     @Override
     public void Encender() {
